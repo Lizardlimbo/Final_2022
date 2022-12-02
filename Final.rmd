@@ -28,6 +28,16 @@ A new  preventative vaccine (covid921) is under test in clinical trials. Given t
 ```{r}
 malesdata=filter(FinalData,sex=="M")
 ```
+### Graphical Description
+```{r}
+barchartGC(~infected + treatment,data=malesdata)
+barchartGC(~infected + treatment,data=malesdata, type="percent")
+
+```
+
+Based on the graph we see that twice the amount of males received placebo while infected with Covid-19 that those with the treatment. With the graph it appears that the treatment is more effective for those infected and with treatment.
+
+
 
 ## Females
 

@@ -67,6 +67,44 @@ Based on the data above, among the males that contract covid921 68.44% received 
 
 ## Females
 
+```{r}
+femalesdata=filter(FinalData,sex=="F")
+```
+$h_0$: The treatment has no affect on females.
+
+$h_A$: The treatment is a affect on females.
+
+### Graphical Description
+```{r}
+barchartGC(~infected + treatment,data=femalesdata)
+barchartGC(~infected + treatment,data=femalesdata, type="percent")
+
+```
+
+Based on the graph we see that more females received treatment while infected with covid921 than those who received the placebo. the females are more effective while infected and treatment.
+
+## Numerical Description
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=femalesdata)
+rowPerc(table1)
+colPerc(table1)
+```
+According to the numerical data, it reflects that 42.82% of females contracted covid921 received the placebo and 57.18% of females received the treatment. The data shows that the treatment is effective for females.
+
+### Inferential Results
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+The Chi squared test has a p-value of 0.005 which is equal to 0.05 meaning we accept the null hypothesis. According to the p-value we concluded that the treatment doesn't have an affect on the females.
+The fisher test has a p-value of 0.004 which is less than 0.05 meaning we reject the null hypothesis. According to the p-value we conclude that the treatment does have an affect on the females.
+
+## Discussion and Conclusion
+Based on the data above, among the females that contract covid921 42.82% received the placebo and 57.18% received the treatment. 
 
 ## LGBTQ
 

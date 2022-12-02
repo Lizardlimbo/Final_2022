@@ -40,7 +40,7 @@ barchartGC(~infected + treatment,data=malesdata, type="percent")
 
 ```
 
-Based on the graph we see that twice the amount of males received placebo while infected with Covid-19 that those with the treatment. With the graph it appears that the treatment is more effective for those infected and with treatment.
+Based on the graph we see that twice the amount of males received placebo while infected with Covid921 that those with the treatment. With the graph it appears that the treatment is more effective for those infected and with treatment.
 
 ## Numerical Description
 
@@ -49,7 +49,7 @@ table1 <- xtabs(~infected + treatment, data=malesdata)
 rowPerc(table1)
 colPerc(table1)
 ```
-According to the numerical data, it reflects that 68.44% of males contracted covid19 received the placebo and 31.56% of males received the treatment. The data shows that the treatment is effective for males.
+According to the numerical data, it reflects that 68.44% of males contracted covid921 received the placebo and 31.56% of males received the treatment. The data shows that the treatment is effective for males.
 
 ### Inferential Results
 
@@ -61,6 +61,9 @@ fisher.test(table1)
 
 The Chi squared test has a p-value of 0.00000000005307 which is less than 0.05 meaning we reject the null hypothesis. $h_A$: The treatment is a affect on males. According to the p-value we concluded that the treatment does have an affect on the males.
 The fisher test has a p-value of 0.0000000000002364 which is less than 0.05 meaning we reject the null hypothesis. According to the p-value we conclude that the treatment does have an affect on the males.
+
+## Discussion and Conclusion
+Based on the data above, among the males that contract covid921 68.44% received the placebo and 31.65% received the treatment. According to the data, among the males the odd are that 2.18 times likely to contract covid921 than males who received the treatment.
 
 ## Females
 

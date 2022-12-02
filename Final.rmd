@@ -108,9 +108,54 @@ Based on the data above, among the females that contract covid921 42.82% receive
 
 ## LGBTQ
 
+```{r}
+lgbtqdata=filter(FinalData,sex=="LGBTQ")
+```
+$h_0$: The treatment has no affect on LGBTQ.
+
+$h_A$: The treatment is a affect on LGBTQ.
+
+
+### Graphical Description
+```{r}
+barchartGC(~infected + treatment,data=lgbtqdata)
+barchartGC(~infected + treatment,data=lgbtqdata, type="percent")
+
+```
+according to the graph having being infected or treatment does not matter in the lgbtq.
+
+## Numerical Description
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=lgbtqdata)
+rowPerc(table1)
+colPerc(table1)
+```
+### Inferential Results
+
+
 
 
 ## Druggies
+```{r}
+druguserdata=filter(FinalData,sex=="DrugUser")
+```
 
+### Graphical Description
+```{r}
+barchartGC(~infected + treatment,data=druguserdata)
+barchartGC(~infected + treatment,data=druguserdata, type="percent")
+
+```
+
+## Numerical Description
+```{r}
+table1 <- xtabs(~infected + treatment, data=druguserdata)
+rowPerc(table1)
+colPerc(table1)
+```
+### Inferential Results
 
 # Overall Results and Conclusions
+
+The overall results show that the sex is affect by covid and not if you use drugs or in the lgbtq.
